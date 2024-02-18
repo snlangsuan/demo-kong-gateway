@@ -1,0 +1,32 @@
+version: '3.8'
+
+networks:
+  kong-net:
+    external: true
+
+services:
+  users:
+    build: .
+    volumes:
+      - ./data/users.json:/data/db.json
+    ports:
+      - "7001:3000"
+  products:
+    build: .
+    volumes:
+      - ./data/products.json:/data/db.json
+    ports:
+      - "7002:3000"
+  carts:
+    build: .
+    volumes:
+      - ./data/carts.json:/data/db.json
+    ports:
+      - "7003:3000"
+  recipes:
+    build: .
+    volumes:
+      - ./data/recipes.json:/data/db.json
+    ports:
+      - "7004:3000"
+  

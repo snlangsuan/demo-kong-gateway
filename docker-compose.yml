@@ -92,6 +92,8 @@ services:
       retries: 10
     restart: on-failure:5
     read_only: true
+    depends_on:
+      - kong-database
     volumes:
       - kong_prefix_vol:${KONG_PREFIX:-/var/run/kong}
       - kong_tmp_vol:/tmp

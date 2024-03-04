@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "moduleResolution": "Node",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "#*": ["src/*"],
+      "tsoa": ["node_modules/tsoa/dist"],
+    },
+  },
+  "include": ["./src/**/*", "app.ts"],
+  "exclude": ["node_modules", "dist"],
+  "files": ["./src/types/expores.d.ts"],
+}

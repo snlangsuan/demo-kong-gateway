@@ -14,13 +14,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "outDir": "dist",
-    "baseUrl": ".",
-    "paths": {
-      "#*": ["src/*"],
-      "tsoa": ["node_modules/tsoa/dist"],
-    },
   },
-  "include": ["./src/**/*", "app.ts"],
+  "include": ["app.ts"],
   "exclude": ["node_modules", "dist"],
-  "files": ["./src/types/expores.d.ts"],
 }

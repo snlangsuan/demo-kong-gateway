@@ -105,6 +105,7 @@ services:
     read_only: true
     depends_on:
       - kong-database
+      - mock-api
     volumes:
       - kong_prefix_vol:${KONG_PREFIX:-/var/run/kong}
       - kong_tmp_vol:/tmp
@@ -114,3 +115,9 @@ services:
     security_opt:
       - no-new-privileges
   
+  mock-api:
+    build: ./mock-auth-service
+    ports:
+      - 3000:3000
+    networks:
+      - kong-net

@@ -31,5 +31,3 @@ RUN npm i --unsafe -g kong-pdk@0.5.5
 COPY ./js-plugins/js-custom-auth /usr/local/kong/js-plugins/js-custom-auth
 WORKDIR /usr/local/kong/js-plugins/js-custom-auth
 RUN npm i
-
-ENV term xterm

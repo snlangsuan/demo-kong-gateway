@@ -110,8 +110,6 @@ services:
       - kong_prefix_vol:${KONG_PREFIX:-/var/run/kong}
       - kong_tmp_vol:/tmp
       - ./config:/opt/kong
-      - ./js-plugins:/usr/local/kong/js-plugins
-      - ./py-plugins:/usr/local/kong/py-plugins
     security_opt:
       - no-new-privileges
   
